@@ -3,7 +3,7 @@
   "version": "1",
   "manifest_version": 3,
   "description": "Extension to watch Disney+ in full screen with Start+ automatically",
-  "permissions": ["tabs", "fullscreen"],
+  "permissions": ["tabs", "fullscreen_override"],
   "background": {
     "service_worker": "background.js"
   },
