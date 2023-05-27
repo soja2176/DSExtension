@@ -2,8 +2,8 @@
   "name": "Full Screen Start+ y Disney+",
   "version": "1",
   "manifest_version": 3,
-  "description": "Extension to watch Disney+ in full screen with Start+ automatically",
-  "permissions": ["tabs", "fullscreen_override"],
+  "description": "Extension to watch Disney+ and Start+ in full screen automatically",
+  "permissions": ["tabs", "activeTab"],
   "background": {
     "service_worker": "background.js"
   },
@@ -11,7 +11,7 @@
     "128": "icon.png"
   },
   "host_permissions": [
-    "https://www.startplus.com/*",
+    "https://www.starplus.com/*",
     "https://www.disneyplus.com/*"
   ]
 }

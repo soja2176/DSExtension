@@ -1,13 +1,17 @@
-// This function is to know if the chrome tab is loaded
+// URL Start+ and Disney+
+const startPlusUrl = "starplus.com";
+const disneyPlusUrl = "disneyplus.com";
 
+// Listener to detect changes in the tab
 chrome.tabs.onUpdated.addListener(function (tabId, changeInfo, tab) {
+  // check if the URL has changed
   if (changeInfo.url) {
-    // Detecta el cambio de URL en Start+ o Disney+
+    // check if the URL is from Start+ or Disney+
     if (
-      changeInfo.url.includes("startplus.com") ||
-      changeInfo.url.includes("disneyplus.com")
+      changeInfo.url.includes(startPlusUrl) ||
+      changeInfo.url.includes(disneyPlusUrl)
     ) {
-      // Hace pantalla completa en la pestaña activa
+      // make full screen in the active tab
       chrome.windows.update(tab.windowId, { state: "fullscreen" });
     }
   }
